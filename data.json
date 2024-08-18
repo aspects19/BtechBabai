@@ -1,0 +1,135 @@
+[
+    {
+      "college": "College1",
+      "semester": "1",
+      "branch": "CSE",
+      "subject": "Mathematics",
+      "pdfUrl": "https://example.com/math.pdf",
+      "chap1":"https://www.instagram.com/",
+      "chap2":"https://example.com/math.pdf",
+      "chap3":"https://example.com/math.pdf",
+      "chap4":"https://example.com/math.pdf",
+      "chap5":"https://example.com/math.pdf",
+      "youtubePlaylist": "https://youtube.com/playlist?list=XYZ123"
+    },
+    {
+      "college": "College1",
+      "semester": "1",
+      "branch": "CSE",
+      "subject": "Physics",
+      "pdfUrl": "https://example.com/physics.pdf",
+       "chap1":"https://example.com/math.pdf",
+      "chap2":"https://example.com/math.pdf",
+      "chap3":"https://example.com/math.pdf",
+      "chap4":"https://example.com/math.pdf",
+      "chap5":"https://example.com/math.pdf",
+      "youtubePlaylist": "https://youtube.com/playlist?list=ABC456"
+    },
+    {
+        "college": "College1",
+        "semester": "1",
+        "branch": "CSE",
+        "subject": "Chemistry",
+        "pdfUrl": "https://example.com/physics.pdf",
+         "chap1":"https://example.com/math.pdf",
+        "chap2":"https://example.com/math.pdf",
+        "chap3":"https://example.com/math.pdf",
+        "chap4":"https://example.com/math.pdf",
+        "chap5":"https://example.com/math.pdf",
+        "youtubePlaylist": "https://youtube.com/playlist?list=ABC456"
+      },
+      {
+        "college": "College1",
+        "semester": "1",
+        "branch": "CSE",
+        "subject": "English",
+        "pdfUrl": "https://example.com/physics.pdf",
+         "chap1":"https://example.com/math.pdf",
+        "chap2":"https://example.com/math.pdf",
+        "chap3":"https://example.com/math.pdf",
+        "chap4":"https://example.com/math.pdf",
+        "chap5":"https://example.com/math.pdf",
+        "youtubePlaylist": "https://youtube.com/playlist?list=ABC456"
+      },
+      {
+        "college": "College1",
+        "semester": "1",
+        "branch": "CSE",
+        "subject": "Environmental studies",
+        "pdfUrl": "https://example.com/physics.pdf",
+         "chap1":"https://example.com/math.pdf",
+        "chap2":"https://example.com/math.pdf",
+        "chap3":"https://example.com/math.pdf",
+        "chap4":"https://example.com/math.pdf",
+        "chap5":"https://example.com/math.pdf",
+        "youtubePlaylist": "https://youtube.com/playlist?list=ABC456"
+      }, 
+       
+      {
+        "college": "College2",
+        "semester": "1",
+        "branch": "CSE",
+        "subject": "Mathematics",
+        "pdfUrl": "https://example.com/math.pdf",
+        "chap1":"https://www.instagram.com/",
+        "chap2":"https://example.com/math.pdf",
+        "chap3":"https://example.com/math.pdf",
+        "chap4":"https://example.com/math.pdf",
+        "chap5":"https://example.com/math.pdf",
+        "youtubePlaylist": "https://youtube.com/playlist?list=XYZ123"
+      },
+      {
+        "college": "College2",
+        "semester": "1",
+        "branch": "CSE",
+        "subject": "Physics",
+        "pdfUrl": "https://example.com/physics.pdf",
+         "chap1":"https://example.com/math.pdf",
+        "chap2":"https://example.com/math.pdf",
+        "chap3":"https://example.com/math.pdf",
+        "chap4":"https://example.com/math.pdf",
+        "chap5":"https://example.com/math.pdf",
+        "youtubePlaylist": "https://youtube.com/playlist?list=ABC456"
+      },
+      {
+          "college": "College2",
+          "semester": "1",
+          "branch": "CSE",
+          "subject": "Chemistry",
+          "pdfUrl": "https://example.com/physics.pdf",
+           "chap1":"https://example.com/math.pdf",
+          "chap2":"https://example.com/math.pdf",
+          "chap3":"https://example.com/math.pdf",
+          "chap4":"https://example.com/math.pdf",
+          "chap5":"https://example.com/math.pdf",
+          "youtubePlaylist": "https://youtube.com/playlist?list=ABC456"
+        },
+        {
+          "college": "College2",
+          "semester": "1",
+          "branch": "CSE",
+          "subject": "English",
+          "pdfUrl": "https://example.com/physics.pdf",
+           "chap1":"https://example.com/math.pdf",
+          "chap2":"https://example.com/math.pdf",
+          "chap3":"https://example.com/math.pdf",
+          "chap4":"https://example.com/math.pdf",
+          "chap5":"https://example.com/math.pdf",
+          "youtubePlaylist": "https://youtube.com/playlist?list=ABC456"
+        },
+        {
+          "college": "College2",
+          "semester": "1",
+          "branch": "CSE",
+          "subject": "Environmental studies",
+          "pdfUrl": "https://example.com/physics.pdf",
+           "chap1":"https://example.com/math.pdf",
+          "chap2":"https://example.com/math.pdf",
+          "chap3":"https://example.com/math.pdf",
+          "chap4":"https://example.com/math.pdf",
+          "chap5":"https://example.com/math.pdf",
+          "youtubePlaylist": "https://youtube.com/playlist?list=ABC456"
+        }
+  ]
+  
+

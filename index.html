@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BtechBabai</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="font-sans antialiased text-gray-300 leading-normal tracking-wider bg-black text-shadow-lg">
+  <nav class="bg-black shadow-md py-6 px-8">
+    <div class="container mx-auto flex flex-wrap items-center justify-between">
+      <div class="text-3xl font-bold text-gray-300 text-shadow">BtechBabai</div>
+      <div class="flex space-x-4">
+        <a href="#" class="text-gray-300 hover:text-gray-500 text-shadow">Home</a>
+        <a href="#" class="text-gray-300 hover:text-gray-500 text-shadow">Resources</a>
+        <a href="#" class="text-gray-300 hover:text-gray-500 text-shadow">About</a>
+        <a href="#" class="text-gray-300 hover:text-gray-500 text-shadow">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container mx-auto px-8 py-10">
+    <form id="searchForm" action="results.html" method="GET">
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+          <div class="flex flex-col space-y-1.5 p-6">
+            <h2 class="text-2xl font-bold text-gray-300 text-shadow">Select College</h2>
+          </div>
+          <div class="p-6">
+            <select name="college" class="w-full h-10 px-3 py-2 border border-gray-600 bg-black text-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-shadow">
+              <option value="College1">Pragati Engineering College</option>
+              <option value="College2">Aditya Engineering College</option>
+              <option value="College3">GIET Engineering College</option>
+              <option value="College4">KEIT Engineering College</option>
+            </select>
+          </div>
+        </div>
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+          <div class="flex flex-col space-y-1.5 p-6">
+            <h2 class="text-2xl font-bold text-gray-300 text-shadow">Select Semester</h2>
+          </div>
+          <div class="p-6">
+            <select name="semester" class="w-full h-10 px-3 py-2 border border-gray-600 bg-black text-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-shadow">
+              <option value="1">Semester 1</option>
+              <option value="2">Semester 2</option>
+              <option value="3">Semester 3</option>
+              <option value="4">Semester 4</option>
+              <option value="5">Semester 5</option>
+              <option value="6">Semester 6</option>
+              <option value="7">Semester 7</option>
+              <option value="8">Semester 8</option>
+            </select>
+          </div>
+        </div>
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+          <div class="flex flex-col space-y-1.5 p-6">
+            <h2 class="text-2xl font-bold text-gray-300 text-shadow">Select Branch</h2>
+          </div>
+          <div class="p-6">
+            <select name="branch" class="w-full h-10 px-3 py-2 border border-gray-600 bg-black text-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-shadow">
+              <option value="CSE">CSE</option>
+              <option value="ECE">ECE</option>
+              <option value="EEE">EEE</option>
+              <option value="MECH">MECH</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <button type="submit" class="px-8 py-2 text-gray-300 bg-gray-700 hover:bg-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 mx-auto self-center text-shadow">
+            Search
+          </button>
+        </div>
+      </section>
+    </form>
+  </main>
+  <footer class="bg-black text-gray-300 py-6 text-shadow">
+    <div class="container mx-auto px-8">
+      <div class="flex justify-between items-center">
+        <div class="text-lg text-shadow">© 2023 BtechBabai</div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-500 hover:text-gray-300 text-shadow">Privacy Policy</a>
+          <a href="#" class="text-gray-500 hover:text-gray-300 text-shadow">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
