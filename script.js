@@ -22,7 +22,7 @@ window.onload = function () {
             const resultCard = `
               <div class="rounded-lg border bg-gray-900 text-white p-4 shadow-sm">
                 <h3 class="text-2xl font-bold mb-2">${item.subject}</h3>
-                <p class="mb-2">Previous Year Paper:<a href="${item.pdfUrl}" class="text-blue-400" target="_blank">Download</a></p>
+                <p class="mb-2">Previous Year:<a href="${item.pdfUrl}" class="text-blue-400" target="_blank">Download</a></p>
                 <p class="mb-2">Chapter 1 <a href="${item.chap1}" class="text-blue-400" target="_blank">Download</a></p>
                 <p class="mb-2">Chapter 2 <a href="${item.chap2}" class="text-blue-400" target="_blank">Download</a></p>
                 <p class="mb-2">Chapter 3 <a href="${item.chap3}" class="text-blue-400" target="_blank">Download</a></p>
