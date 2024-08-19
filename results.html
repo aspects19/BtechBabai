@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Results - BtechBabai</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
 </head>
 <body class="font-sans antialiased text-gray-300 leading-normal tracking-wider bg-black text-shadow-lg">
+  
   <nav class="bg-black shadow-md py-6 px-8">
     <div class="container mx-auto flex flex-wrap items-center justify-between">
       <div class="text-3xl font-bold text-gray-300 text-shadow">BtechBabai</div>
@@ -18,14 +20,14 @@
       </div>
     </div>
   </nav>
+  
   <main class="container mx-auto px-8 py-10">
-    <section>
-      <h2 class="text-3xl font-bold mb-8 text-center text-shadow">Results</h2>
-      <div id="results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Dynamic content will be inserted here -->
-      </div>
-    </section>
+    <h1 class="text-3xl font-bold text-gray-300 text-shadow mb-8">Search Results</h1>
+    <div id="resultsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Dynamic content will be inserted here -->
+    </div>
   </main>
+  
   <footer class="bg-black text-gray-300 py-6 text-shadow">
     <div class="container mx-auto px-8">
       <div class="flex justify-between items-center">
@@ -37,6 +39,15 @@
       </div>
     </div>
   </footer>
+
+<!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+<!-- Firebase Database -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
   <script src="script.js"></script>
+ 
 </body>
 </html>
+

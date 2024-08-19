@@ -1,0 +1,190 @@
+{
+  "College1": {
+    "CSE": {
+      "1": [
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        },
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        },
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        },
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        }
+       
+      ]
+    },
+   "ECE": {
+      "1": [
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        },
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        },
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        },
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        }
+       
+      ]
+    }
+
+  },
+
+  "College2": {
+    "CSE": {
+      "1": [
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        },
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        },
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        },
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        }
+       
+      ]
+    },
+   "ECE": {
+      "1": [
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        },
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        },
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        },
+        {
+          "subject": "Environmental Studies",
+          "pdfUrl": "https://...",
+          "chap1": "https://...",
+          "chap2": "https://...",
+          "chap3": "https://...",
+          "chap4": "https://...",
+          "chap5": "https://...",
+          "youtubePlaylist": "https://..."
+        }
+       
+      ]
+    }
+    
+  }
+ 
+}
