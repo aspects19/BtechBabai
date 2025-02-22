@@ -3,7 +3,7 @@ name: Deploy to Firebase
 on:
   push:
     branches:
-      - main  
+      - secure-api  
 
 jobs:
   deploy:
