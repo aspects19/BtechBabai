@@ -2,8 +2,8 @@
 const firebaseConfig = {
   // apiKey: "AIzaSyAIi0Qlg3-wbuaPXUQFPl2YtpeDqPRnT-Q",
   apiKey: "import.meta.env.VITE_FIREBASE_API_KEY",
-  authDomain: "btechbabaiii.firebaseapp.com",
-  databaseURL: "https://btechbabaiii-default-rtdb.asia-southeast1.firebasedatabase.app",
+  authDomain: "import.meta.env.VITE_FIREBASE_AUTH_DOMAIN",
+  databaseURL: "import.meta.env.VITE_FIREBASE_DATABASE_URL",
   projectId: "btechbabaiii",
   storageBucket: "btechbabaiii.appspot.com",
   messagingSenderId: "87207859004",
