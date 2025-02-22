@@ -17,10 +17,35 @@
     html {
       scroll-behavior: smooth;
     }
+    /* From Uiverse.io by qhns3 */ 
+.container {
+  width: 100%;
+  height: 100%;
+
+  background: #000000;
+  --gap: 5em;
+  --line: 1px;
+  --color: rgba(255, 255, 255, 0.2);
+
+  background-image: linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    );
+  background-size: var(--gap) var(--gap);
+}
+
   </style>
 
 </head>
-<body class="font-sans antialiased text-gray-300 leading-normal tracking-wider bg-black text-shadow-lg">
+<body class="container antialiased text-gray-300 leading-normal tracking-wider text-shadow-lg">
   <div class="bg-indigo-600 px-4 py-3 text-white">
     <!-- Message for desktop and large screens -->
     <p class="hidden sm:block text-center text-sm font-medium">
@@ -36,7 +61,7 @@
   </div>
   
   
-  <nav class="bg-black shadow-md py-6 px-8">
+  <nav class=" shadow-md py-6 px-8">
     <div class="container mx-auto flex flex-wrap items-center justify-between">
       <div class="text-3xl font-bold text-gray-300 text-shadow">BtechBabai</div>
       <div class="flex space-x-4">
@@ -50,7 +75,7 @@
 
   
   
-  <section class="branding bg-black text-white">
+  <section class="branding  text-white">
     <div class="mx-auto max-w-screen-xl px-4 py-15 lg:flex  lg:items-center">
       <div class="mx-auto max-w-3xl text-center">
         <h1
@@ -83,6 +108,7 @@
       </div>
     </div>
   </section>
+  
   <main id="formSection" class="container mx-auto px-8 py-10">
     <form id="searchForm" action="results.html" method="GET">
       <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
