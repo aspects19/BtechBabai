@@ -67,4 +67,4 @@ function displayNoResults() {
   const resultsContainer = document.getElementById('resultsContainer');
   resultsContainer.innerHTML = '<p class="text-xl text-gray-300">No results found for the selected options.</p>';
 }
->>>>>>> parent of 36c72d0 (Moved project files to public directory):script.js
+
