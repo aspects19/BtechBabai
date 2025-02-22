@@ -3,7 +3,7 @@ name: Deploy to Firebase
 on:
   push:
     branches:
-      - secure-api  # Run workflow only on the secure-api branch
+      - secure-api  # Only deploy from the secure-api branch
 
 jobs:
   deploy:
@@ -18,12 +18,6 @@ jobs:
 
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
-
-      - name: Initialize Firebase (if needed)
-        run: |
-          if [ ! -f firebase.json ]; then
-            firebase init hosting --force --project "btechbabaiii"
-          fi
 
       - name: Deploy to Firebase
         run: firebase deploy --project "btechbabaiii" --token "${{ secrets.FIREBASE_DEPLOY_TOKEN }}"
