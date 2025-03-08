@@ -127,3 +127,15 @@ For any queries or collaboration opportunities, reach out to:
 
 If you find this project useful, **don’t forget to star ⭐ the repo!** It helps others discover and contribute.
 
+---
+Developed by [shafi mohammad](https://github.com/shafimohammad09)
+---
+```
+  /*
+  * This file is part of BtechBabai.
+  * Copyright (C) 2025 Shafi Mohammad
+  * Licensed under the GNU General Public License v3.0
+  */
+```
+
+
