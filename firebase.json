@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "btechbabaiii-141ae",
+    "site": "btechbabaiii",
     "public": "public",
     "ignore": [
       "firebase.json",
