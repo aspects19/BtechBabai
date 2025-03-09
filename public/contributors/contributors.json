@@ -1,0 +1,21 @@
+
+[
+    { 
+        "name": "Alice", 
+        "github": "shafimohammad09", 
+        "bio": "I am a passionate software developer", 
+        "city": "Kakinada", 
+        "instagram": "https://www.instagram.com/iam_shafi_mohammad", 
+        "linkedin": "https://www.linkedin.com/in/shafimohammad09/", 
+        "twitter": "https://x.com/shafi_Mohammad_"
+    },
+    { 
+        "name": "Bob", 
+        "github": "bobdev", 
+        "bio": "Full-stack developer exploring open source", 
+        "city": "New York", 
+        "instagram": "https://www.instagram.com/bob", 
+        "linkedin": "https://www.linkedin.com/in/bob", 
+        "twitter": "https://www.x.com/bob"
+    }
+]

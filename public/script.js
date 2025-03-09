@@ -1,3 +1,10 @@
+// /*
+//  * This file is part of BtechBabai.
+//  * Copyright (C) 2025 Shafi Mohammad
+//  * Licensed under the GNU General Public License v3.0
+//  */
+
+
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   // apiKey: "AIzaSyAIi0Qlg3-wbuaPXUQFPl2YtpeDqPRnT-Q",

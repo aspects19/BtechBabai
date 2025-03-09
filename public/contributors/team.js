@@ -1,3 +1,9 @@
+// /*
+//  * This file is part of BtechBabai.
+//  * Copyright (C) 2025 Shafi Mohammad
+//  * Licensed under the GNU General Public License v3.0
+//  */
+
 document.addEventListener("DOMContentLoaded", () => {
     const coreContainer = document.getElementById("core-container");
     const contributorsContainer = document.getElementById("contributors-container");
