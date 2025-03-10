@@ -1,13 +1,22 @@
 
 [
     { 
-        "name": "Alice", 
+        "name": "Shafi Mohammad", 
         "github": "shafimohammad09", 
         "bio": "I am a passionate software developer", 
         "city": "Kakinada", 
         "instagram": "https://www.instagram.com/iam_shafi_mohammad", 
         "linkedin": "https://www.linkedin.com/in/shafimohammad09/", 
         "twitter": "https://x.com/shafi_Mohammad_"
+    },
+    { 
+        "name": "Umer Shabbir", 
+        "github": "umer-shabbir", 
+        "bio": "Hey I am a full stack web developer, if you want to connect with me follow me on social media and lets connect", 
+        "city": "Lahore, Pakistan", 
+        "instagram": "https://www.instagram.com/umershabbir205/", 
+        "linkedin": "https://www.linkedin.com/in/mumers/", 
+        "twitter": "https://www.x.com/"
     },
     { 
         "name": "siva krishna", 
