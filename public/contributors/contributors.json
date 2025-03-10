@@ -1,4 +1,3 @@
-
 [
     { 
         "name": "Shafi Mohammad", 
@@ -21,11 +20,11 @@
     { 
         "name": "siva krishna", 
         "github": "KarriSivakrishna", 
-        "bio": "Frontend Developer ", 
+        "bio": "Frontend Developer", 
         "city": "Kakinada", 
         "instagram": "https://www.instagram.com/mr_siva__krishna/", 
         "linkedin": "https://www.linkedin.com/in/KarrisivaKrishna", 
-        "twitter": "https://www.linkedin.com/in/KarrisivaKrishna"
+        "twitter": "https://twitter.com/KarrisivaKrishna"
     },
     { 
         "name": "Eshwar", 
@@ -34,6 +33,6 @@
         "city": "Kakinada", 
         "instagram": "https://www.instagram.com/eswar_madapani/", 
         "linkedin": "https://www.linkedin.com/in/eswarmadapani", 
-        "twitter": "https://www.linkedin.com/in/eswarmadapani"
+        "twitter": "https://twitter.com/eswarmadapani"
     }
 ]
