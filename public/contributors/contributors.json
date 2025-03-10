@@ -1,22 +1,13 @@
 
 [
     { 
-        "name": "Alice", 
+        "name": "Shafi Mohammad", 
         "github": "shafimohammad09", 
-        "bio": "I am a passionate software developer", 
-        "city": "Kakinada", 
+        "bio": "I am a passionate software developer with a growing skill set in Java, Python, web development, and DevOps.", 
+        "city": "Kakinada, India", 
         "instagram": "https://www.instagram.com/iam_shafi_mohammad", 
         "linkedin": "https://www.linkedin.com/in/shafimohammad09/", 
         "twitter": "https://x.com/shafi_Mohammad_"
-    },
-    { 
-        "name": "Bob", 
-        "github": "bobdev", 
-        "bio": "Full-stack developer exploring open source", 
-        "city": "New York", 
-        "instagram": "https://www.instagram.com/bob", 
-        "linkedin": "https://www.linkedin.com/in/bob", 
-        "twitter": "https://www.x.com/bob"
     },
     { 
         "name": "Umer Shabbir", 
@@ -26,5 +17,22 @@
         "instagram": "https://www.instagram.com/umershabbir205/", 
         "linkedin": "https://www.linkedin.com/in/mumers/", 
         "twitter": "https://www.x.com/"
+    },
+        "name": "siva krishna", 
+        "github": "KarriSivakrishna", 
+        "bio": "Frontend Developer ", 
+        "city": "Kakinada", 
+        "instagram": "https://www.instagram.com/mr_siva__krishna/", 
+        "linkedin": "https://www.linkedin.com/in/KarrisivaKrishna", 
+        "twitter": "https://www.linkedin.com/in/KarrisivaKrishna"
+    },
+    { 
+        "name": "Eshwar", 
+        "github": "eswarmadapani", 
+        "bio": "I am a passionate UI/UX developer", 
+        "city": "Kakinada", 
+        "instagram": "https://www.instagram.com/eswar_madapani/", 
+        "linkedin": "https://www.linkedin.com/in/eswarmadapani", 
+        "twitter": "https://www.linkedin.com/in/eswarmadapani"
     }
 ]
