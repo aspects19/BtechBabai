@@ -17,5 +17,14 @@
         "instagram": "https://www.instagram.com/bob", 
         "linkedin": "https://www.linkedin.com/in/bob", 
         "twitter": "https://www.x.com/bob"
+    },
+    { 
+        "name": "Umer Shabbir", 
+        "github": "umer-shabbir", 
+        "bio": "Hey I am a full stack web developer, if you want to connect with me follow me on social media and lets connect", 
+        "city": "Lahore, Pakistan", 
+        "instagram": "https://www.instagram.com/umershabbir205/", 
+        "linkedin": "https://www.linkedin.com/in/mumers/", 
+        "twitter": "https://www.x.com/"
     }
 ]

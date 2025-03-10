@@ -78,17 +78,42 @@
   </div>
   
   
-  <nav class=" shadow-md py-6 px-8">
-    <div class="container mx-auto flex flex-wrap items-center justify-between">
-      <div class="text-3xl font-bold text-gray-300 text-shadow">BtechBabai</div>
-      <div class="flex space-x-4">
-        <a href="#" class="text-gray-300 hover:text-gray-500 text-shadow">Home</a>
-        <a href="#" class="text-gray-300 hover:text-gray-500 text-shadow">Resources</a>
-        <a href="#" class="text-gray-300 hover:text-gray-500 text-shadow">About</a>
-        <a href="#" class="text-gray-300 hover:text-gray-500 text-shadow">Contact</a>
-      </div>
+  <nav class="py-4">
+    <div class="container mx-auto flex items-center justify-between px-4">
+        
+
+        <div class="text-3xl font-bold text-gray-300">BtechBabai</div>
+
+
+        <div class="hidden md:flex space-x-6">
+            <a href="../index.html" class="hover:text-gray-500">Home</a>
+            <a href="#" class="hover:text-gray-500">Resources</a>
+            <a href="#" class="hover:text-gray-500">About</a>
+            <a href="#" class="hover:text-gray-500">Contact</a>
+        </div>
+
+
+        <button id="menu-toggle" class="md:hidden focus:outline-none">
+            <svg class="w-8 h-8 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+            </svg>
+        </button>
+
     </div>
-  </nav>
+</nav>
+
+
+<div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-6 text-2xl text-gray-300 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+    <button id="close-menu" class="absolute top-6 right-6 text-gray-300">
+        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+    </button>
+    <a href="../index.html" class="hover:text-gray-500">Home</a>
+    <a href="#" class="hover:text-gray-500">Resources</a>
+    <a href="#" class="hover:text-gray-500">About</a>
+    <a href="#" class="hover:text-gray-500">Contact</a>
+</div>
 
   
   
@@ -193,5 +218,8 @@
       </div>
     </div>
   </footer>
+
+
+  <script src="./mobile-nav.js"></script>
 </body>
 </html>
