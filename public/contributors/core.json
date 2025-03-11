@@ -8,15 +8,5 @@
         "instagram": "https://www.instagram.com/shafi",
         "linkedin": "https://www.linkedin.com/in/shafi",
         "twitter": "https://www.x.com/shafi"
-    },
-    {
-        "name": "Another Developer",
-        "github": "anotherdev",
-        "role": "Co-Founder",
-        "city": "City, Country",
-        "bio": "Loves coding and contributing to open-source.",
-        "instagram": "https://www.instagram.com/anotherdev",
-        "linkedin": "https://www.linkedin.com/in/anotherdev",
-        "twitter": "https://www.x.com/anotherdev"
     }
 ]
