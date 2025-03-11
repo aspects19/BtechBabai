@@ -1,132 +1,171 @@
-  <!-- /*
-  * This file is part of BtechBabai.
-  * Copyright (C) 2025 Shafi Mohammad
-  * Licensed under the GNU General Public License v3.0
-  */ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="IF6H3sZk83aWzzBPbQhZ3fFEqtcIPF1WLwwCxiuAlgI" />
-  <title>BtechBabai</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-
-
-  <style>
-      /* Ensure smooth scrolling across the entire document */
-      html {
-        scroll-behavior: smooth;
-      }
-      /* From Uiverse.io by qhns3 */ 
-      .container {
-        width: 100%;
-        height: 100%;
-
-        background: #000000;
-        --gap: 5em;
-        --line: 1px;
-        --color: rgba(255, 255, 255, 0.2);
-
-        background-image: linear-gradient(
-            -90deg,
-            transparent calc(var(--gap) - var(--line)),
-            var(--color) calc(var(--gap) - var(--line) + 1px),
-            var(--color) var(--gap)
-          ),
-          linear-gradient(
-            0deg,
-            transparent calc(var(--gap) - var(--line)),
-            var(--color) calc(var(--gap) - var(--line) + 1px),
-            var(--color) var(--gap)
-          );
-        background-size: var(--gap) var(--gap);
-      }
-
-  </style>
-
-</head>
- 
-<!-- ----This is GOOGLE analytics tag---- -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XX9S18S08V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XX9S18S08V');
-</script>
-
-<body class="container antialiased text-gray-300 leading-normal tracking-wider text-shadow-lg">
-  <div class="bg-indigo-600 px-4 py-3 text-white">
-    <!-- Message for desktop and large screens -->
-    <p class="hidden sm:block text-center text-sm font-medium">
-      We currently have resources for Pragati Engineering College. Our team is working diligently to add more content. Please be patient and stay tuned for updates!
-      <a href="#" class="inline-block underline">Help us!</a>
-    </p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Message for small screens like mobile -->
-    <p class="block sm:hidden text-center text-sm font-medium">
-      We currently have resources for Pragati Engineering College. Please be patient and stay tuned for updates!
-      <a href="#" class="inline-block underline">Help us!</a>
-    </p>
-  </div>
+    <!-- Enhanced SEO Meta Tags -->
+    <title>BtechBabai - Free Engineering Study Materials & AI Help</title>
+    <meta name="description" content="Download free engineering notes, previous year papers & get AI homework help. Resources for CSE, ECE, EEE, MECH. Best study materials for Pragati Engineering College and more.">
+    <meta name="keywords" content="engineering notes, btech study materials, free engineering resources, previous year papers, AI homework help, Pragati Engineering College, CSE notes, ECE study material, engineering exam preparation">
+    
+    <!-- News Article Tags -->
+    <meta property="article:published_time" content="2024-01-01">
+    <meta property="article:modified_time" content="2024-03-14">
+    <meta property="article:section" content="Education">
+    <meta property="article:tag" content="Engineering Education">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Free Engineering Study Materials & Notes | BtechBabai">
+    <meta property="og:description" content="Access free engineering study materials, AI homework help, and previous year papers. Perfect for BTech students!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://btechbabaiii.web.app/">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BtechBabai - Free Engineering Resources">
+    <meta name="twitter:description" content="Free engineering study materials and AI homework help">
+
+    <!-- Ad-related Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="monetization" content="true">
+    
+    <!-- Styles and Scripts -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    
+
+
+    <style>
+      *{
+        user-select: none;
+      }
+      @media (min-width: 1280px) {
+      .container {
+          max-width: 100%; /* or any other value you prefer */
+      }
+  }
+    .container {
+          width: 100%;
+          /* height: 100vh; */
+          /* padding: 1rem; */
   
+          background: #000000;
+          --gap: 5em;
+          --line: 1px;
+          --color: rgba(255, 255, 255, 0.2);
   
-  <nav class="py-4">
-    <div class="container mx-auto flex items-center justify-between px-4">
+          background-image: linear-gradient(
+              -90deg,
+              transparent calc(var(--gap) - var(--line)),
+              var(--color) calc(var(--gap) - var(--line) + 1px),
+              var(--color) var(--gap)
+            ),
+            linear-gradient(
+              0deg,
+              transparent calc(var(--gap) - var(--line)),
+              var(--color) calc(var(--gap) - var(--line) + 1px),
+              var(--color) var(--gap)
+            );
+          background-size: var(--gap) var(--gap);
+        }
+    </style> 
+
+
+     <!-- Structured Data -->
+     <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "BtechBabai",
+        "url": "https://btechbabaiii.web.app/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://btechbabaiii.web.app/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        },
+        "sameAs": [
+          "https://github.com/ShafiMohammad09/BtechBabai"
+        ],
+        "about": {
+          "@type": "Thing",
+          "name": "Engineering Education",
+          "description": "Free engineering study materials and resources"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        }
+      }
+      </script>
+</head> 
+
+<body class="antialiased text-gray-300 leading-normal tracking-wider text-shadow-lg">
+  <div class="container">
         
 
-        <div class="text-3xl font-bold text-gray-300">BtechBabai</div>
+      <!-- Announcement Bar -->
 
-
-        <div class="hidden md:flex space-x-6">
-            <a href="../index.html" class="hover:text-gray-500">Home</a>
-            <a href="#" class="hover:text-gray-500">Resources</a>
-            <a href="#" class="hover:text-gray-500">About</a>
-            <a href="#" class="hover:text-gray-500">Contact</a>
-        </div>
-
-
-        <button id="menu-toggle" class="md:hidden focus:outline-none">
-            <svg class="w-8 h-8 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
-            </svg>
-        </button>
-
+    <div class="bg-indigo-600 px-4 py-3 text-white">
+      <!-- Message for desktop and large screens -->
+      <p class="hidden sm:block text-center text-sm font-medium">
+        We currently have resources for Pragati Engineering College. Our team is working diligently to add more content. Please be patient and stay tuned for updates!
+        <a href="#" class="inline-block underline">Help us!</a>
+      </p>
+      
+      <!-- Message for small screens like mobile -->
+      <p class="block sm:hidden text-center text-sm font-medium">
+        We currently have resources for Pragati Engineering College. Please be patient and stay tuned for updates!
+        <a href="#" class="inline-block underline">Help us!</a>
+      </p>
     </div>
-</nav>
+    
+    <!-- Navigation -->
+    <nav class="py-4">
+      <div class="container mx-auto flex items-center justify-between px-4">
+          
+
+          <div class="text-3xl font-bold text-gray-300">BtechBabai</div>
 
 
-<div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-6 text-2xl text-gray-300 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
-    <button id="close-menu" class="absolute top-6 right-6 text-gray-300">
-        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-        </svg>
-    </button>
-    <a href="../index.html" class="hover:text-gray-500">Home</a>
-    <a href="#" class="hover:text-gray-500">Resources</a>
-    <a href="#" class="hover:text-gray-500">About</a>
-    <a href="#" class="hover:text-gray-500">Contact</a>
-</div>
+          <div class="hidden md:flex space-x-6">
+              <a href="../index.html" class="hover:text-gray-500">Home</a>
+              <a href="#" class="hover:text-gray-500">Resources</a>
+              <a href="#" class="hover:text-gray-500">About</a>
+              <a href="#" class="hover:text-gray-500">Contact</a>
+          </div>
 
+
+          <button id="menu-toggle" class="md:hidden focus:outline-none">
+              <svg class="w-8 h-8 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+              </svg>
+          </button>
+
+      </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-6 text-2xl text-gray-300 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+      <button id="close-menu" class="absolute top-6 right-6 text-gray-300">
+          <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+      </button>
+      <a href="../index.html" class="hover:text-gray-500">Home</a>
+      <a href="#" class="hover:text-gray-500">Resources</a>
+      <a href="#" class="hover:text-gray-500">About</a>
+      <a href="#" class="hover:text-gray-500">Contact</a>
+  </div>
   
-  
-  <section class="branding  text-white">
-    <div class="mx-auto max-w-screen-xl px-4 py-15 lg:flex  lg:items-center">
+  <!-- Hero Section -->
+  <section class="branding text-white py-4 ">
+    <div class="mx-auto max-w-screen-xl px-4 lg:flex lg:items-center">
       <div class="mx-auto max-w-3xl text-center">
-        <h1
-          class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
-        >
+        <h1 class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl md:text-4xl lg:text-5xl font-extrabold text-transparent">
           Welcome to BtechBabai.
-  
-          <span class="sm:block"> A One Stop To All Your Academic Needs </span>
+          <span class="block mt-2"> A One Stop To All Your Academic Needs </span>
         </h1>
   
         <p class="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
@@ -135,7 +174,8 @@
   
         <div class="mt-8 flex flex-wrap justify-center gap-4">
           <a
-          class="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+         
+          class="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white hover:border-pink-500/50 transition-all duration-300 shadow-lg hover:shadow-pink-500/10 focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
           href="contributors/team.html">
           Our Team
         </a>
@@ -148,16 +188,21 @@
       </div>
     </div>
   </section>
-  
-  <main id="formSection" class="container mx-auto px-8 py-10">
+  <main id="formSection" class="container mx-auto px-2 md:px-8 py-4 md:py-8">
     <form id="searchForm" action="results.html" method="GET">
-      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+     
+
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+        <!-- College Selection Card -->
+        <div class="rounded-xl border border-gray-700 bg-gray-900/50 backdrop-blur-sm hover:border-blue-800/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/10">
           <div class="flex flex-col space-y-1.5 p-6">
-            <h2 class="text-2xl font-bold text-gray-300 text-shadow">Select College</h2>
-          </div>
-          <div class="p-6">
-            <select name="college" class="w-full h-10 px-3 py-2 border border-gray-600 bg-black text-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-shadow">
+            <div class="flex items-center space-x-3 mb-2">
+              <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              <h2 class="text-xl font-bold text-gray-200">Select College</h2>
+            </div>
+            <select name="college" class="w-full h-12 px-4 py-2 border border-gray-600 bg-gray-800/50 text-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent transition-all duration-300">
               <option value="Pragati">Pragati Engineering College</option>
               <option value="Aditya">Aditya Engineering College</option>
               <option value="GIET">GIET Engineering College</option>
@@ -166,12 +211,16 @@
           </div>
         </div>
         
-        <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+        <!-- Semester Selection Card -->
+        <div class="rounded-xl border border-gray-700 bg-gray-900/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 shadow-lg hover:shadow-purple-500/10">
           <div class="flex flex-col space-y-1.5 p-6">
-            <h2 class="text-2xl font-bold text-gray-300 text-shadow">Select Semester</h2>
-          </div>  
-          <div class="p-6">
-            <select name="semester" class="w-full h-10 px-3 py-2 border border-gray-600 bg-black text-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-shadow">
+            <div class="flex items-center space-x-3 mb-2">
+              <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <h2 class="text-xl font-bold text-gray-200">Select Semester</h2>
+            </div>
+            <select name="semester" class="w-full h-12 px-4 py-2 border border-gray-600 bg-gray-800/50 text-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-transparent transition-all duration-300">
               <option value="sem1">Semester 1</option>
               <option value="sem2">Semester 2</option>
               <option value="sem3">Semester 3</option>
@@ -184,12 +233,16 @@
           </div>
         </div>
         
-        <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+        <!-- Branch Selection Card -->
+        <div class="rounded-xl border border-gray-700 bg-gray-900/50 backdrop-blur-sm hover:border-pink-500/50 transition-all duration-300 shadow-lg hover:shadow-pink-500/10">
           <div class="flex flex-col space-y-1.5 p-6">
-            <h2 class="text-2xl font-bold text-gray-300 text-shadow">Select Branch</h2>
-          </div>
-          <div class="p-6">
-            <select name="branch" class="w-full h-10 px-3 py-2 border border-gray-600 bg-black text-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-shadow">
+            <div class="flex items-center space-x-3 mb-2">
+              <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+              <h2 class="text-xl font-bold text-gray-200">Select Branch</h2>
+            </div>
+            <select name="branch" class="w-full h-12 px-4 py-2 border border-gray-600 bg-gray-800/50 text-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-transparent transition-all duration-300">
               <option value="CSE">CSE</option>
               <option value="CSE-AI">CSE-AI</option>
               <option value="ECE">ECE</option>
@@ -198,29 +251,435 @@
             </select>
           </div>
         </div>
-        
+      </section>
+
+      <!-- Search Button -->
+      <div class="flex justify-center mt-10">
         <div class="flex justify-center items-center">
-          <button type="submit" class="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">
-            Search
+          <button type="submit" 
+            class="relative block w-full rounded-lg border border-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 px-12 py-3 text-sm font-medium text-white 
+            transition-all duration-300 ease-in-out
+            hover:scale-105 hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] 
+            focus:outline-none focus:ring-2 focus:ring-purple-500/50 
+            sm:w-auto 
+            before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-500 before:via-purple-500 before:to-pink-500 before:opacity-0 before:transition-opacity hover:before:opacity-100"
+          >
+            <span class="relative">
+              Search Resources
+              <svg class="inline-block w-4 h-4 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </span>
           </button>
         </div>
-      </section>
+      </div>
     </form>
   </main>
+  
+  <!-- Replace the existing Open Source Project section  -->
+  <section class="py-12 text-gray-300 relative">
+    <!-- Background Effect -->
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent pointer-events-none"></div>
+    
+    <div class="container mx-auto px-4 max-w-6xl relative">
+      <!-- Animated Title -->
+      <h2 class="text-4xl font-bold mb-8 text-center animate-gradient">
+        <span class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent 
+                     animate-pulse-slow">
+          Join Our Open Source Journey
+        </span>
+      </h2>
+      
+      <!-- Animated Subtitle with Typing Effect -->
+      <p class="text-center mb-12 typewriter overflow-hidden whitespace-nowrap mx-auto text-gray-400">
+        Building the future of engineering education, one commit at a time...
+      </p>
+  
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- GitHub Stats Card -->
+        <div class="group p-8 border border-gray-700 rounded-xl bg-gray-900/50 backdrop-blur-sm 
+                    hover:border-blue-500/50 transition-all duration-500 
+                    hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] 
+                    transform hover:-translate-y-2">
+          
+          <!-- Repository Header -->
+          <div class="flex items-center justify-between mb-6">
+            <h3 class="text-2xl font-semibold flex items-center">
+              <svg class="w-8 h-8 mr-3 text-blue-500 animate-bounce-slow" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                BtechBabai Repository
+              </span>
+            </h3>
+          </div>
+  
+          <!-- Repository Description -->
+          <p class="text-gray-400 mb-6 leading-relaxed">
+            An open-source initiative to provide free, high-quality engineering study materials. Built with ❤️ by students, for students.
+          </p>
+  
+          <!-- GitHub Stats Grid -->
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <!-- Stars Counter -->
+            <div class="p-4 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-blue-500/50 transition-all duration-300">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div id="stars-count" class="text-2xl font-bold text-blue-400 mb-1">0</div>
+                  <div class="text-sm text-gray-400">Stars</div>
+                </div>
+                <svg class="w-6 h-6 text-blue-500 animate-pulse-slow" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823a1 1 0 0 0-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 0 0-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.81.588-1.81h4.914a1 1 0 0 0 .951-.69l1.519-4.674a1 1 0 0 0-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 0 0 .951-.69l1.519-4.674z"/>
+                </svg>
+              </div>
+            </div>
+            <!-- Forks Counter -->
+            <div class="p-4 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div id="forks-count" class="text-2xl font-bold text-purple-400 mb-1">0</div>
+                  <div class="text-sm text-gray-400">Forks</div>
+                </div>
+                <svg class="w-6 h-6 text-purple-500 animate-pulse-slow" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 21a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zm-3.25-1.75a3.25 3.25 0 106.5 0 3.25 3.25 0 00-6.5 0zm-3-12.75a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM2.5 4.75a3.25 3.25 0 106.5 0 3.25 3.25 0 00-6.5 0zM18.25 6.5a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM15 4.75a3.25 3.25 0 106.5 0 3.25 3.25 0 00-6.5 0z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Star Project CTA -->
+          <div class="mb-8">
+            <div class="relative group cursor-pointer">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse-slow"></div>
+              <a href="https://github.com/ShafiMohammad09/BtechBabai" 
+                 class="relative flex items-center justify-center px-7 py-4 bg-black rounded-lg leading-none">
+                <span class="flex items-center space-x-3">
+                  <svg class="w-6 h-6 text-pink-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823a1 1 0 0 0-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 0 0-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.81.588-1.81h4.914a1 1 0 0 0 .951-.69l1.519-4.674a1 1 0 0 0-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 0 0 .951-.69l1.519-4.674z"/>
+                  </svg>
+                  <span class="text-gray-100">Star this project on GitHub</span>
+                </span>
+              </a>
+            </div>
+          </div>
+  
+          <!-- Quick Links -->
+          <div class="flex flex-wrap gap-4">
+            <a href="https://github.com/ShafiMohammad09/BtechBabai/issues/new" 
+               class="flex items-center space-x-2 text-sm text-gray-400 hover:text-blue-400 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm-1 14h2v2h-2v-2zm2-1.645V14h-2v-1.5c0-1.4.7-2.5 1.5-3.15.8-.65 1.2-1.65.8-2.8-.35-1.05-1.4-1.8-2.5-1.8-1.15 0-2.15.75-2.5 1.85l-1.9-.35C6.9 5.1 8.5 3.5 10.5 3.5c2.15 0 4 1.5 4.5 3.55.45 1.85-.4 3.7-2.05 4.45-.7.3-1.45.75-1.45 1.85z"/>
+              </svg>
+              <span>Report Issue</span>
+            </a>
+            <a href="https://github.com/ShafiMohammad09/BtechBabai/pulls" 
+               class="flex items-center space-x-2 text-sm text-gray-400 hover:text-purple-400 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"/>
+              </svg>
+              <span>Pull Requests</span>
+            </a>
+          </div>
+        </div>
+  
+        <!-- Contribution Guide -->
+        <div class="group p-8 border border-gray-700 rounded-xl bg-gray-900/50 backdrop-blur-sm 
+                    hover:border-pink-500/50 transition-all duration-500 
+                    hover:shadow-[0_0_30px_rgba(236,72,153,0.2)] 
+                    transform hover:-translate-y-2">
+          <h3 class="text-2xl font-semibold mb-6 flex items-center">
+            <svg class="w-8 h-8 mr-3 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+            </svg>
+            <span class="bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
+              How to Contribute
+            </span>
+          </h3>
+  
+          <!-- Steps to Contribute -->
+          <div class="space-y-6">
+            <!-- Step 1: Star -->
+            <div class="flex items-start space-x-4 group">
+              <div class="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                <span class="text-yellow-500 font-semibold">1</span>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-gray-200 mb-2">Star the Repository</h4>
+                <p class="text-gray-400">Show your support by starring our project</p>
+              </div>
+            </div>
+  
+            <!-- Step 2: Fork -->
+            <div class="flex items-start space-x-4 group">
+              <div class="w-8 h-8 rounded-full bg-pink-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                <span class="text-pink-500 font-semibold">2</span>
+              </div>
+                <div>
+                <h4 class="text-lg font-semibold text-gray-200 mb-2">Fork the Repository</h4>
+                <p class="text-gray-400">Create your own copy of the project to work on</p>
+              </div>
+            </div>
+  
+            <!-- Step 3: Changes -->
+            <div class="flex items-start space-x-4 group">
+              <div class="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                <span class="text-purple-500 font-semibold">3</span>
+                </div>
+                <div>
+                <h4 class="text-lg font-semibold text-gray-200 mb-2">Make Your Changes</h4>
+                <p class="text-gray-400">Add new materials or improve existing content</p>
+              </div>
+            </div>
+  
+            <!-- Step 4: PR -->
+            <div class="flex items-start space-x-4 group">
+              <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                <span class="text-blue-500 font-semibold">4</span>
+                </div>
+                <div>
+                <h4 class="text-lg font-semibold text-gray-200 mb-2">Submit a Pull Request</h4>
+                <p class="text-gray-400">We'll review and merge your contributions</p>
+              </div>
+            </div>
+          </div>
+                </div>
+            </div>
+        </div>
+      </section>
+   <!-- New Popular Resources Section (Good for SEO and Ads) -->
+    <section class="py-12 text-gray-300">
+      <div class="container mx-auto px-4 max-w-6xl">
+        <h2 class="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          Popular Engineering Resources
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- CSE Card -->
+          <div class="group p-6 border border-gray-700 rounded-xl bg-gray-900/50 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 transform hover:-translate-y-1">
+            <h3 class="text-xl font-semibold mb-4 flex items-center">
+              <svg class="w-6 h-6 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              CSE Materials
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                Data Structures & Algorithms Notes
+              </li>
+              <li class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                Operating Systems Complete Guide
+              </li>
+              <li class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                DBMS Interview Preparation
+              </li>
+              <li class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                Web Development Roadmap
+              </li>
+            </ul>
+          </div>
 
-  <footer class="bg-black text-gray-300 py-6 text-shadow">
-    <div class="container mx-auto px-8">
-      <div class="flex justify-between items-center">
-        <div class="text-lg text-shadow">© 2025 BtechBabai</div>
-        <div class="flex space-x-4">
-          <a href="#" class="text-gray-500 hover:text-gray-300 text-shadow">Privacy Policy</a>
-          <a href="#" class="text-gray-500 hover:text-gray-300 text-shadow">Terms of Service</a>
+          <!-- ECE Card -->
+          <div class="group p-6 border border-gray-700 rounded-xl bg-gray-900/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10 transform hover:-translate-y-1">
+            <h3 class="text-xl font-semibold mb-4 flex items-center">
+              <svg class="w-6 h-6 mr-2 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+              ECE Materials
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                Digital Electronics Handbook
+              </li>
+              <li class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                Microprocessors & Interfacing
+              </li>
+              <li class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                Communication Systems
+              </li>
+              <li class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                VLSI Design Fundamentals
+              </li>
+                  </ul>
+              </div>
+
+          <!-- MECH Card -->
+          <div class="group p-6 border border-gray-700 rounded-xl bg-gray-900/50 backdrop-blur-sm hover:border-pink-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/10 transform hover:-translate-y-1">
+            <h3 class="text-xl font-semibold mb-4 flex items-center">
+              <svg class="w-6 h-6 mr-2 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              </svg>
+              MECH Materials
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                <span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+                Thermodynamics Complete Guide
+              </li>
+              <li class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                <span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+                Machine Design Analysis
+              </li>
+              <li class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                <span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+                Fluid Mechanics Notes
+              </li>
+              <li class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                <span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+                CAD/CAM Technologies
+              </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </section>
+    
+<!-- New Latest Updates Section (Good for Fresh Content SEO) -->
+    <section class="py-12 text-gray-300">
+      <div class="container mx-auto px-4 max-w-6xl">
+        <h2 class="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          Latest Study Materials
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <article class="group p-6 border border-gray-700 rounded-xl bg-gray-900/50 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+                  <h3 class="text-xl font-semibold">2024 Semester Updates</h3>
+            </div>
+            <p class="mt-2 text-gray-400 group-hover:text-gray-300 transition-colors">Latest R20 & R23 regulation materials added for all branches. Includes updated syllabus, previous year questions, and comprehensive study guides.</p>
+              </article>
+
+          <article class="group p-6 border border-gray-700 rounded-xl bg-gray-900/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold">Exam Preparation Resources</h3>
+            </div>
+            <p class="mt-2 text-gray-400 group-hover:text-gray-300 transition-colors">Comprehensive exam guides, important questions, and quick revision notes for mid-semester and end-semester examinations.</p>
+              </article>
+          </div>
+      </div>
+    </section>
+    
+ <!-- FAQ Section -->
+    <section class="py-12 text-gray-300">
+      <div class="container mx-auto px-4 max-w-6xl">
+        <h2 class="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          Frequently Asked Questions
+        </h2>
+        <div class="space-y-6 max-w-4xl mx-auto">
+          <div class="group">
+            <button class="w-full flex justify-between items-center p-6 border border-gray-700 rounded-xl bg-gray-900/50 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300">
+              <h3 class="text-lg font-semibold text-left">Is BtechBabai really 100% free?</h3>
+              <svg class="w-5 h-5 transform group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="overflow-hidden transition-all duration-300 max-h-0 group-hover:max-h-40">
+              <p class="p-6 text-gray-400">Yes! BtechBabai is completely free for all engineering students. We believe in making quality education accessible to everyone. No hidden charges, no premium features - just free, high-quality study materials.</p>
+            </div>
+          </div>
+
+          <div class="group">
+            <button class="w-full flex justify-between items-center p-6 border border-gray-700 rounded-xl bg-gray-900/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
+              <h3 class="text-lg font-semibold text-left">How often are materials updated?</h3>
+              <svg class="w-5 h-5 transform group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="overflow-hidden transition-all duration-300 max-h-0 group-hover:max-h-40">
+              <p class="p-6 text-gray-400">We update our materials regularly to align with the latest university syllabus. New resources are added weekly, and major updates happen before each semester.</p>
+            </div>
+              </div>
+
+          <div class="group">
+            <button class="w-full flex justify-between items-center p-6 border border-gray-700 rounded-xl bg-gray-900/50 backdrop-blur-sm hover:border-pink-500/50 transition-all duration-300">
+              <h3 class="text-lg font-semibold text-left">How can I contribute to BtechBabai?</h3>
+              <svg class="w-5 h-5 transform group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="overflow-hidden transition-all duration-300 max-h-0 group-hover:max-h-40">
+              <p class="p-6 text-gray-400">You can contribute by sharing your notes, previous year papers, or joining our development team. Visit our GitHub repository or contact us through the website to get started.</p>
+              </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+
+    <footer class="text-gray-300 py-6 text-shadow">
+      <div class="mx-auto px-8">
+        <div class="flex flex-wrap justify-between items-center">
+          <div class="text-lg text-shadow">© 2025 BtechBabai</div>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-500 hover:text-gray-300 text-shadow">Privacy Policy</a>
+            <a href="#" class="text-gray-500 hover:text-gray-300 text-shadow">Terms of Service</a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
+  <script src="team.js"></script>
+  <script src="../mobile-nav.js"></script>
 
 
-  <script src="./mobile-nav.js"></script>
+    
+  
+
+
+<!-- Add these styles to your existing styles section -->
+<style>
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
+
+.typewriter {
+  border-right: 2px solid #3B82F6;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  max-width: fit-content;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #3B82F6 }
+}
+</style>
+
+<!-- Add this script before the closing body tag -->
+<script src="github-stats.js"></script>
 </body>
 </html>

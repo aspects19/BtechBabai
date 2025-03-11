@@ -1,0 +1,87 @@
+[debug] [2025-03-10T16:26:01.014Z] ----------------------------------------------------------------------
+[debug] [2025-03-10T16:26:01.019Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Shafi Mohammad\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --project btechbabaiii --debug
+[debug] [2025-03-10T16:26:01.019Z] CLI Version:   13.33.0
+[debug] [2025-03-10T16:26:01.020Z] Platform:      win32
+[debug] [2025-03-10T16:26:01.020Z] Node Version:  v20.10.0
+[debug] [2025-03-10T16:26:01.020Z] Time:          Mon Mar 10 2025 21:56:01 GMT+0530 (India Standard Time)
+[debug] [2025-03-10T16:26:01.020Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-10T16:26:01.370Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-10T16:26:01.373Z] > authorizing via signed-in user (shafimohammad5050@gmail.com)
+[debug] [2025-03-10T16:26:01.374Z] [iam] checking project btechbabaiii for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-03-10T16:26:01.376Z] Checked if tokens are valid: true, expires at: 1741627099229
+[debug] [2025-03-10T16:26:01.377Z] Checked if tokens are valid: true, expires at: 1741627099229
+[debug] [2025-03-10T16:26:01.379Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/btechbabaiii:testIamPermissions [none]
+[debug] [2025-03-10T16:26:01.380Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/btechbabaiii:testIamPermissions x-goog-quota-user=projects/btechbabaiii
+[debug] [2025-03-10T16:26:01.381Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/btechbabaiii:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-03-10T16:26:02.612Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/btechbabaiii:testIamPermissions 200
+[debug] [2025-03-10T16:26:02.613Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/btechbabaiii:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-03-10T16:26:02.615Z] Checked if tokens are valid: true, expires at: 1741627099229
+[debug] [2025-03-10T16:26:02.616Z] Checked if tokens are valid: true, expires at: 1741627099229
+[debug] [2025-03-10T16:26:02.616Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/btechbabaiii [none]
+[debug] [2025-03-10T16:26:03.362Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/btechbabaiii 200
+[debug] [2025-03-10T16:26:03.363Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/btechbabaiii {"projectId":"btechbabaiii","projectNumber":"87207859004","displayName":"btechbabaiii","name":"projects/btechbabaiii","resources":{"hostingSite":"btechbabaiii","realtimeDatabaseInstance":"btechbabaiii-default-rtdb","locationId":"asia-southeast1"},"state":"ACTIVE","etag":"1_a962c870-a1a3-4a83-8b29-6defb804adc6"}
+[info] 
+[info] === Deploying to 'btechbabaiii'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-03-10T16:26:03.373Z] Checked if tokens are valid: true, expires at: 1741627099229
+[debug] [2025-03-10T16:26:03.374Z] Checked if tokens are valid: true, expires at: 1741627099229
+[debug] [2025-03-10T16:26:03.374Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/btechbabaiii/versions [none]
+[debug] [2025-03-10T16:26:03.375Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/btechbabaiii/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-03-10T16:26:05.735Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/btechbabaiii/versions 200
+[debug] [2025-03-10T16:26:05.736Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/btechbabaiii/versions {"name":"projects/87207859004/sites/btechbabaiii/versions/507378f4f4f9a560","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[btechbabaiii]: beginning deploy... 
+[info] i  hosting[btechbabaiii]: found 12 files in public 
+[debug] [2025-03-10T16:26:05.762Z] [hosting] uploading with 200 concurrency
+[debug] [2025-03-10T16:26:05.768Z] Checked if tokens are valid: true, expires at: 1741627099229
+[debug] [2025-03-10T16:26:05.769Z] Checked if tokens are valid: true, expires at: 1741627099229
+[debug] [2025-03-10T16:26:05.771Z] [hosting] hash cache [cHVibGlj] stored for 12 files
+[debug] [2025-03-10T16:26:05.772Z] [hosting][hash queue][FINAL] {"max":3,"min":1,"avg":1,"active":0,"complete":12,"success":12,"errored":0,"retried":0,"total":12,"elapsed":7}
+[debug] [2025-03-10T16:26:05.773Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/87207859004/sites/btechbabaiii/versions/507378f4f4f9a560:populateFiles [none]
+[debug] [2025-03-10T16:26:05.773Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/87207859004/sites/btechbabaiii/versions/507378f4f4f9a560:populateFiles {"files":{"/script.js":"74f1670397ebee9b905aab8b3caaa11c266429935041304bba99043ceae915fc","/results.html":"91523e7f1133d308166e31651291f19b2cda2f12cb87790fc79b5d412e43c7c0","/mobile-nav.js":"c774d1e6185c690d2fdf701b09171f9a481ca3ad7eb409ff014c58f3ac73ab9c","/index.html":"8081fb1162c0971aa0801c78e20f550c3ba94cb3a207bfbf747bb5dde149ca9e","/404.html":"a53cc142bf30bf9228169a1746ad5ec9975748adb44e82c9d0902884beb1aafb","/contributors/team.js":"11f886c045965105ca40059099e2319fe03edacf85fd04edb9b3752568e975fe","/contributors/team.html":"0fe28ca56d75a370be763ffb26f6a36dec8714a2cebc7d8ef6abd14277feaa1b","/contributors/styles.css":"2e11725df2f16dbce300043c211617fa408c087327ce50938b54bfae9381097a","/contributors/pexels-olly-3760373.jpg":"4e2b5d376bd30bc9460f4d852ea630280d53bf98ef501b99e31f3b9ad4748359","/contributors/Group3.png":"dcab8c6e8ee4e3c6422ab6af21b0a7f4883e76be3e2f4feb482568793808aa29","/contributors/core.json":"5c7b851e6441d8eace7431bf488e64ec9f6263c86a30f4974271df2a373fd5f2","/contributors/contributors.json":"e85d10536ed5a9ed872ef94d05a3843a85e3d1e229aa9622b09e04569efbd60a"}}
+[debug] [2025-03-10T16:26:06.440Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/87207859004/sites/btechbabaiii/versions/507378f4f4f9a560:populateFiles 200
+[debug] [2025-03-10T16:26:06.440Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/87207859004/sites/btechbabaiii/versions/507378f4f4f9a560:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/btechbabaiii/versions/507378f4f4f9a560/files"}
+[debug] [2025-03-10T16:26:06.441Z] [hosting][populate queue][FINAL] {"max":673,"min":673,"avg":673,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":673}
+[debug] [2025-03-10T16:26:06.442Z] [hosting] uploads queued: 0
+[debug] [2025-03-10T16:26:06.442Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1741623966442}
+[info] i  hosting: upload complete 
+[info] +  hosting[btechbabaiii]: file upload complete 
+[debug] [2025-03-10T16:26:06.444Z] [hosting] deploy completed after 702ms
+[debug] [2025-03-10T16:26:06.444Z] [
+  {
+    "config": {
+      "site": "btechbabaiii",
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    "version": "projects/87207859004/sites/btechbabaiii/versions/507378f4f4f9a560"
+  }
+]
+[info] i  hosting[btechbabaiii]: finalizing version... 
+[debug] [2025-03-10T16:26:06.447Z] Checked if tokens are valid: true, expires at: 1741627099229
+[debug] [2025-03-10T16:26:06.447Z] Checked if tokens are valid: true, expires at: 1741627099229
+[debug] [2025-03-10T16:26:06.449Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/btechbabaiii/versions/507378f4f4f9a560 updateMask=status%2Cconfig
+[debug] [2025-03-10T16:26:06.449Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/btechbabaiii/versions/507378f4f4f9a560 {"status":"FINALIZED","config":{}}
+[debug] [2025-03-10T16:26:07.001Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/btechbabaiii/versions/507378f4f4f9a560 200
+[debug] [2025-03-10T16:26:07.002Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/btechbabaiii/versions/507378f4f4f9a560 {"name":"projects/87207859004/sites/btechbabaiii/versions/507378f4f4f9a560","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-03-10T16:26:06.878266Z","createUser":{"email":"shafimohammad5050@gmail.com"},"finalizeTime":"2025-03-10T16:26:09.290994Z","finalizeUser":{"email":"shafimohammad5050@gmail.com"}}
+[debug] [2025-03-10T16:26:07.003Z] [hosting] finalized version for btechbabaiii:[object Object]
+[info] +  hosting[btechbabaiii]: version finalized 
+[info] i  hosting[btechbabaiii]: releasing new version... 
+[debug] [2025-03-10T16:26:07.004Z] Checked if tokens are valid: true, expires at: 1741627099229
+[debug] [2025-03-10T16:26:07.005Z] Checked if tokens are valid: true, expires at: 1741627099229
+[debug] [2025-03-10T16:26:07.005Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/btechbabaiii/channels/live/releases versionName=projects%2F87207859004%2Fsites%2Fbtechbabaiii%2Fversions%2F507378f4f4f9a560
+[debug] [2025-03-10T16:26:07.005Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/btechbabaiii/channels/live/releases {}
+[debug] [2025-03-10T16:26:07.672Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/btechbabaiii/channels/live/releases 200
+[debug] [2025-03-10T16:26:07.673Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/btechbabaiii/channels/live/releases {"name":"projects/87207859004/sites/btechbabaiii/channels/live/releases/1741623969297000","version":{"name":"projects/87207859004/sites/btechbabaiii/versions/507378f4f4f9a560","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-03-10T16:26:06.878266Z","createUser":{"email":"shafimohammad5050@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLcCmdx3_j-yZ_B-83TVNdfz-y8gyvzvDWXDIxk2YT-HJ1Y3KUN"},"finalizeTime":"2025-03-10T16:26:09.290994Z","finalizeUser":{"email":"shafimohammad5050@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLcCmdx3_j-yZ_B-83TVNdfz-y8gyvzvDWXDIxk2YT-HJ1Y3KUN"}},"type":"DEPLOY","releaseTime":"2025-03-10T16:26:09.297Z","releaseUser":{"email":"shafimohammad5050@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLcCmdx3_j-yZ_B-83TVNdfz-y8gyvzvDWXDIxk2YT-HJ1Y3KUN"}}
+[debug] [2025-03-10T16:26:07.674Z] [hosting] release: {"name":"projects/87207859004/sites/btechbabaiii/channels/live/releases/1741623969297000","version":{"name":"projects/87207859004/sites/btechbabaiii/versions/507378f4f4f9a560","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-03-10T16:26:06.878266Z","createUser":{"email":"shafimohammad5050@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLcCmdx3_j-yZ_B-83TVNdfz-y8gyvzvDWXDIxk2YT-HJ1Y3KUN"},"finalizeTime":"2025-03-10T16:26:09.290994Z","finalizeUser":{"email":"shafimohammad5050@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLcCmdx3_j-yZ_B-83TVNdfz-y8gyvzvDWXDIxk2YT-HJ1Y3KUN"}},"type":"DEPLOY","releaseTime":"2025-03-10T16:26:09.297Z","releaseUser":{"email":"shafimohammad5050@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLcCmdx3_j-yZ_B-83TVNdfz-y8gyvzvDWXDIxk2YT-HJ1Y3KUN"}}
+[info] +  hosting[btechbabaiii]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/btechbabaiii/overview
+[info] Hosting URL: https://btechbabaiii.web.app
