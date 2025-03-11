@@ -1,0 +1,110 @@
+* {
+    user-select: none;
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+.container {
+    width: 100%;
+    background: #000000;
+    --gap: 5em;
+    --line: 1px;
+    --color: rgba(255, 255, 255, 0.2);
+    background-image: linear-gradient(
+        -90deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+    ),
+    linear-gradient(
+        0deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+    );
+    background-size: var(--gap) var(--gap);
+}
+
+/* Loading Animation Styles */
+.loader {
+    width: 200px;
+    height: 4px;
+    background: rgba(255,255,255,0.15);
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.loader::after {
+    content: '';
+    width: 40%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    animation: animloader 2s linear infinite;
+}
+
+/* Animations */
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+}
+
+.animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce-slow {
+    animation: bounce 2s infinite;
+}
+
+.typewriter {
+    border-right: 2px solid #3B82F6;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    max-width: fit-content;
+}
+
+/* Keyframes */
+@keyframes animloader {
+    0% {
+        left: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        left: 100%;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #3B82F6 }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .7; }
+}
+
+.loading-animation {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+} 
