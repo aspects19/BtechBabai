@@ -414,8 +414,8 @@ const authUI = {
             // Update user info
             if (this.userName) this.userName.textContent = user.displayName || user.email;
             if (this.userNameMobile) this.userNameMobile.textContent = user.displayName || user.email;
-            if (this.userAvatar) this.userAvatar.src = user.photoURL || '/images/default-avatar.png';
-            if (this.userAvatarMobile) this.userAvatarMobile.src = user.photoURL || '/images/default-avatar.png';
+            if (this.userAvatar) this.userAvatar.src = user.photoURL || '../assets/founder.jpeg';
+            if (this.userAvatarMobile) this.userAvatarMobile.src = user.photoURL || '../assets/founder.jpeg';
 
             // Check if user is admin
             const isAdmin = user.email.endsWith('@btechbabai.com');
@@ -439,6 +439,12 @@ const authUI = {
     }
 };
 
+function getReturnUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('returnUrl') || 'index.html';
+}
+
+
 // Authentication Functions
 const authFunctions = {
     async signUp(email, password, displayName) {
@@ -456,6 +462,8 @@ const authFunctions = {
     async signIn(email, password) {
         try {
             const userCredential = await auth.signInWithEmailAndPassword(email, password);
+            const returnUrl = getReturnUrl();
+            window.location.href = returnUrl;
             return userCredential.user;
         } catch (error) {
             throw error;
@@ -485,6 +493,8 @@ const authFunctions = {
         const provider = new firebase.auth.GoogleAuthProvider();
         try {
             const result = await auth.signInWithPopup(provider);
+            const returnUrl = getReturnUrl();
+            window.location.href = returnUrl;
             return result.user;
         } catch (error) {
             throw error;
@@ -499,25 +509,36 @@ const formHandlers = {
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         const displayName = document.getElementById('displayName').value;
+        const selectedAvatar = document.querySelector('input[name="avatar"]:checked').value;
 
         try {
-            await authFunctions.signUp(email, password, displayName);
+            // Create user account
+            const user = await authFunctions.signUp(email, password, displayName);
+            
+            // Update user profile with selected avatar
+            await user.updateProfile({
+                photoURL: `/avatars/${selectedAvatar}`
+            });
+
+            // Store user data in database
+            const userRef = database.ref(`users/${user.uid}`);
+            await userRef.set({
+                displayName: displayName,
+                email: email,
+                avatar: selectedAvatar,
+                createdAt: new Date().toISOString()
+            });
+
+            // Redirect to home page
             window.location.href = 'index.html';
         } catch (error) {
-            alert(error.message);
-        }
-    },
-
-    async handleSignIn(e) {
-        e.preventDefault();
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-
-        try {
-            await authFunctions.signIn(email, password);
-            window.location.href = 'index.html';
-        } catch (error) {
-            alert(error.message);
+            const errorMessage = document.getElementById('error-message');
+            if (errorMessage) {
+                errorMessage.textContent = error.message;
+                errorMessage.style.display = 'block';
+            } else {
+                alert(error.message);
+            }
         }
     },
 
@@ -571,6 +592,66 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add global logout handler
     window.handleLogout = () => authFunctions.signOut();
+    const avatarInputs = document.querySelectorAll('input[name="avatar"]');
+    avatarInputs.forEach(input => {
+        // Add click handler to the label
+        const label = input.parentElement.querySelector('label');
+        label.addEventListener('click', (e) => {
+            e.preventDefault();
+            input.checked = true;
+            
+            // Remove selected class from all labels
+            document.querySelectorAll('input[name="avatar"]').forEach(radio => {
+                radio.parentElement.querySelector('img').classList.remove('border-blue-500');
+            });
+
+            // Add selected class to the chosen avatar
+            input.parentElement.querySelector('img').classList.add('border-blue-500');
+        });
+    });
+
+    // Dynamically load avatars
+    const avatarContainer = document.getElementById('avatar-container');
+    const avatarFilenames = ['avatar-1.gif', 'avatar-2.gif', 'avatar-3.gif', 'avatar-4.jpg', 'avatar-5.jpg','avatar-6.gif','avatar-7.gif','avatar-8.gif','avatar-9.gif']; // Add more as needed
+
+    avatarFilenames.forEach((filename, index) => {
+        const avatarDiv = document.createElement('div');
+        avatarDiv.classList.add('relative');
+
+        const input = document.createElement('input');
+        input.type = 'radio';
+        input.name = 'avatar';
+        input.value = filename;
+        input.classList.add('sr-only');
+        if (index === 0) input.checked = true; // Check the first avatar by default
+
+        const label = document.createElement('label');
+        label.classList.add('cursor-pointer', 'block');
+
+        const img = document.createElement('img');
+        img.src = `/avatars/${filename}`;
+        img.alt = `Avatar ${index + 1}`;
+        img.classList.add('w-20', 'h-20', 'rounded-full', 'border-2', 'border-transparent', 'hover:border-blue-500', 'transition-all', 'duration-300');
+
+        label.appendChild(img);
+        avatarDiv.appendChild(input);
+        avatarDiv.appendChild(label);
+        avatarContainer.appendChild(avatarDiv);
+
+        // Add click handler to the label
+        label.addEventListener('click', (e) => {
+            e.preventDefault();
+            input.checked = true;
+
+            // Remove selected class from all labels
+            document.querySelectorAll('input[name="avatar"]').forEach(radio => {
+                radio.parentElement.querySelector('img').classList.remove('border-blue-500');
+            });
+
+            // Add selected class to the chosen avatar
+            img.classList.add('border-blue-500');
+        });
+    });
 });
 
 // Export functions for use in HTML
