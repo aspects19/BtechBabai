@@ -4,18 +4,7 @@
 //  * Licensed under the GNU General Public License v3.0
 //  */
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-    // apiKey: "AIzaSyAIi0Qlg3-wbuaPXUQFPl2YtpeDqPRnT-Q",
-    apiKey: "import.meta.env.VITE_FIREBASE_API_KEY",
-    authDomain: "import.meta.env.VITE_FIREBASE_AUTH_DOMAIN",
-    databaseURL: "https://btechbabaiii-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "import.meta.env.VITE_FIREBASE_PROJECT_ID",
-    storageBucket: "import.meta.env.VITE_FIREBASE_STORAGE_BUCKET",
-    messagingSenderId: "import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID",
-    appId: "import.meta.env.VITE_FIREBASE_APP_ID",
-    measurementId: "import.meta.env.VITE_FIREBASE_MEASUREMENT_ID"
-  };
+import firebaseConfig from './config.js';
 
 // Initialize Firebase services
 const app = firebase.initializeApp(firebaseConfig);
@@ -552,6 +541,29 @@ const formHandlers = {
         } catch (error) {
             alert(error.message);
         }
+    },
+
+    // Add handleSignIn function
+    async handleSignIn(e) {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        try {
+            await authFunctions.signIn(email, password);
+        } catch (error) {
+            const errorMessage = document.getElementById('error-message');
+            if (errorMessage) {
+                errorMessage.textContent = error.message;
+                errorMessage.style.display = 'block';
+                // Hide the error message after 5 seconds
+                setTimeout(() => {
+                    errorMessage.style.display = 'none';
+                }, 5000);
+            } else {
+                alert(error.message);
+            }
+        }
     }
 };
 
@@ -610,10 +622,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Dynamically load avatars
-    const avatarContainer = document.getElementById('avatar-container');
-    const avatarFilenames = ['avatar-1.gif', 'avatar-2.gif', 'avatar-3.gif', 'avatar-4.jpg', 'avatar-5.jpg','avatar-6.gif','avatar-7.gif','avatar-8.gif','avatar-9.gif']; // Add more as needed
+    // Hardcoded avatar paths
+    const avatarFilenames = [
+        'avatar-1.gif',
+        'avatar-2.gif',
+        'avatar-3.gif',
+        'avatar-4.jpg',
+        'avatar-5.jpg',
+        'avatar-6.gif',
+        'avatar-7.gif',
+        'avatar-8.gif',
+        'avatar-9.gif'
+    ];
 
+    // Assuming the avatars are now in the public/avatars directory
+    const avatarContainer = document.getElementById('avatar-container');
     avatarFilenames.forEach((filename, index) => {
         const avatarDiv = document.createElement('div');
         avatarDiv.classList.add('relative');
@@ -629,7 +652,7 @@ document.addEventListener('DOMContentLoaded', () => {
         label.classList.add('cursor-pointer', 'block');
 
         const img = document.createElement('img');
-        img.src = `/avatars/${filename}`;
+        img.src = `/avatars/${filename}`; // Ensure this path matches the location in the public directory
         img.alt = `Avatar ${index + 1}`;
         img.classList.add('w-20', 'h-20', 'rounded-full', 'border-2', 'border-transparent', 'hover:border-blue-500', 'transition-all', 'duration-300');
 
