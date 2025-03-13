@@ -1,8 +1,7 @@
 # Btech Babai
 
 Btech Babai is an open-source web application designed to help engineering students easily access academic resources such as subject PDFs, previous year exam papers, and relevant YouTube playlists. The project is built on Firebase and aims to provide a centralized repository of study materials.
-![Screenshot_13-3-2025_152039_localhost](https://github.com/user-attachments/assets/e6ac79f7-ebc2-4a19-b853-938c724a2266)
-
+![image](https://github.com/user-attachments/assets/cacb6e86-adac-4ccf-96a7-cc2264057cc8)
 
 
 ## 🚀 Live Demo (Beta)
@@ -73,8 +72,8 @@ To run this project locally, follow these steps:
 ## 🤝 Contributing
 
 We welcome contributions from everyone! Follow these steps to contribute:
+![image](https://github.com/user-attachments/assets/5a7c44a9-a23d-471f-a95e-a92dfc3ecae3)
 
-![image](https://github.com/user-attachments/assets/ec6d7d59-d331-4492-87ed-0962999600e8)
 
 
 ### 🏆 **Add Your Profile to the Team Page**
