@@ -18,86 +18,67 @@ const college = urlParams.get('college');
 const semester = urlParams.get('semester');
 const branch = urlParams.get('branch');
 
-// Add this function to check and clean up orphaned database entries
-async function cleanupOrphanedEntries(college, branch, semester) {
-    const dbRef = database.ref(`${college}/${branch}/${semester}`);
-    const snapshot = await dbRef.once('value');
-    
-    if (!snapshot.exists()) return;
+// Add cache management
+const cache = {
+    data: new Map(),
+    timestamp: new Map(),
+    maxAge: 5 * 60 * 1000, // 5 minutes cache
 
-    const entries = snapshot.val();
-    for (const [key, data] of Object.entries(entries)) {
-        // Check if any of the required files exist
-        const filesExist = await Promise.all([
-            verifyFileExists(data.pdfUrl),
-            verifyFileExists(data.chap1),
-            verifyFileExists(data.chap2),
-            verifyFileExists(data.chap3),
-            verifyFileExists(data.chap4),
-            verifyFileExists(data.chap5)
-        ]);
+    isValid(key) {
+        if (!this.timestamp.has(key)) return false;
+        return (Date.now() - this.timestamp.get(key)) < this.maxAge;
+    },
 
-        // If none of the files exist, remove the database entry
-        if (!filesExist.some(exists => exists)) {
-            console.log(`Removing orphaned entry for subject: ${data.subject}`);
-            await dbRef.child(key).remove();
-        }
+    set(key, data) {
+        this.data.set(key, data);
+        this.timestamp.set(key, Date.now());
+    },
+
+    get(key) {
+        return this.isValid(key) ? this.data.get(key) : null;
     }
-}
+};
 
-// Modified verifyFileExists function
-async function verifyFileExists(url) {
-    if (!url) return false;
-    if (url.includes('drive.google.com')) return true; // Google Drive links are assumed valid
-
-    if (url.includes('firebasestorage')) {
-        try {
-            const fileRef = storage.refFromURL(url);
-            await fileRef.getMetadata();
-            return true;
-        } catch (error) {
-            console.warn('File not found:', url);
-            return false;
-        }
-    }
-    return true; // Other URLs are assumed valid
-}
-
-// Modified fetchData function
+// Modified fetchData function with caching
 async function fetchData(college, semester, branch) {
-  const path = `${college}/${branch}/${semester}`;
-  const dbRef = database.ref(path);
+    const path = `${college}/${branch}/${semester}`;
+    const cacheKey = path;
+    const resultsContainer = document.getElementById('resultsContainer');
 
     try {
-        // First, clean up any orphaned entries
-        await cleanupOrphanedEntries(college, branch, semester);
+        // Check cache first
+        const cachedData = cache.get(cacheKey);
+        if (cachedData) {
+            displayResults(cachedData);
+            return;
+        }
 
-        // Then fetch the cleaned data
+        // Show loading spinner
+        resultsContainer.innerHTML = '<div class="spinner"></div>';
+
+        const dbRef = database.ref(path);
         const snapshot = await dbRef.once('value');
+        
         if (snapshot.exists()) {
             const data = snapshot.val();
-            const dataArray = [];
-
-            // Convert to array and verify files exist
-            for (const [key, value] of Object.entries(data)) {
-                const filesExist = await Promise.all([
-                    verifyFileExists(value.pdfUrl),
-                    verifyFileExists(value.chap1)
-                ]);
-
-                if (filesExist.every(exists => exists)) {
-                    dataArray.push({
-                        id: key,
-                        ...value
-                    });
+            
+            // Group by subject and keep only the latest entry
+            const subjectMap = new Map();
+            Object.entries(data).forEach(([key, value]) => {
+                const subject = value.subject;
+                const existingEntry = subjectMap.get(subject);
+                
+                if (!existingEntry || value.uploadedAt > existingEntry.uploadedAt) {
+                    subjectMap.set(subject, { id: key, ...value });
                 }
-            }
+            });
 
-            if (dataArray.length > 0) {
-                displayResults(dataArray);
-            } else {
-                displayNoResults();
-            }
+            // Convert map to array
+            const dataArray = Array.from(subjectMap.values());
+            
+            // Cache the results
+            cache.set(cacheKey, dataArray);
+            displayResults(dataArray);
         } else {
             displayNoResults();
         }
@@ -105,6 +86,56 @@ async function fetchData(college, semester, branch) {
         console.error("Error fetching data:", error);
         displayError(error);
     }
+}
+
+// Modify cleanupOrphanedEntries to run less frequently
+let lastCleanup = 0;
+const CLEANUP_INTERVAL = 30 * 60 * 1000; // 30 minutes
+
+async function cleanupOrphanedEntries(college, branch, semester) {
+    // Only run cleanup if enough time has passed
+    if (Date.now() - lastCleanup < CLEANUP_INTERVAL) {
+        return;
+    }
+
+    const dbRef = database.ref(`${college}/${branch}/${semester}`);
+    const snapshot = await dbRef.once('value');
+    
+    if (!snapshot.exists()) return;
+
+    lastCleanup = Date.now();
+    // ... rest of cleanup logic ...
+}
+
+// Remove the periodic cleanup interval
+// setInterval(() => {...}, 60000); // Remove this
+
+// Modify verifyFileExists to cache results
+const fileExistsCache = new Map();
+const FILE_CACHE_DURATION = 60 * 60 * 1000; // 1 hour
+
+async function verifyFileExists(url) {
+    if (!url) return false;
+    if (url.includes('drive.google.com')) return true;
+
+    // Check cache
+    const cachedResult = fileExistsCache.get(url);
+    if (cachedResult && (Date.now() - cachedResult.timestamp < FILE_CACHE_DURATION)) {
+        return cachedResult.exists;
+    }
+
+    if (url.includes('firebasestorage')) {
+        try {
+            const fileRef = storage.refFromURL(url);
+            await fileRef.getMetadata();
+            fileExistsCache.set(url, { exists: true, timestamp: Date.now() });
+            return true;
+        } catch (error) {
+            fileExistsCache.set(url, { exists: false, timestamp: Date.now() });
+            return false;
+        }
+    }
+    return true;
 }
 
 // Function to display results
@@ -265,7 +296,7 @@ async function deleteSubjectMaterials(college, branch, semester, subjectId) {
     }
 }
 
-// Modified upload form handler to check for existing entries
+// Modified handleUpload function to handle duplicates
 async function handleUpload(e) {
     e.preventDefault();
     
@@ -281,58 +312,111 @@ async function handleUpload(e) {
         const semester = document.getElementById('semester').value;
         const subject = document.getElementById('subject').value;
 
-        // Clean up any orphaned entries first
-        await cleanupOrphanedEntries(college, branch, semester);
+        // Show loading indicator
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        if (loadingSpinner) loadingSpinner.classList.remove('hidden');
 
-        // Check for existing valid entries
+        // Check for existing subject entry
         const dbRef = database.ref(`${college}/${branch}/${semester}`);
         const snapshot = await dbRef.orderByChild('subject').equalTo(subject).once('value');
         
+        let existingKey = null;
         if (snapshot.exists()) {
-            const existingData = snapshot.val();
-            const existingKey = Object.keys(existingData)[0];
-            const existingFiles = await Promise.all([
-                verifyFileExists(existingData[existingKey].pdfUrl),
-                verifyFileExists(existingData[existingKey].chap1)
-            ]);
+            // Get the first matching entry's key
+            existingKey = Object.keys(snapshot.val())[0];
 
-            if (existingFiles.some(exists => exists) && !user.email.endsWith('@btechbabai.com')) {
-                alert('This subject already exists and has valid files. Only administrators can update existing materials.');
+            // If not admin, prevent overwriting
+            if (!user.email.endsWith('@btechbabai.com')) {
+                alert('This subject already exists. Only administrators can update existing materials.');
+                if (loadingSpinner) loadingSpinner.classList.add('hidden');
                 return;
             }
 
-            // If files don't exist, remove the orphaned entry
-            if (!existingFiles.some(exists => exists)) {
-                await dbRef.child(existingKey).remove();
-            }
+            // Delete old files from storage if they exist
+            const oldData = snapshot.val()[existingKey];
+            await deleteOldFiles(oldData);
         }
 
-        // Continue with upload process...
-        // Your existing upload code here
+        // Upload new files and get their URLs
+        const newData = await uploadFiles(college, branch, semester, subject);
+
+        // Update or create database entry
+        if (existingKey) {
+            // Update existing entry
+            await dbRef.child(existingKey).update({
+                ...newData,
+                uploadedAt: Date.now(),
+                uploadedBy: user.email
+            });
+        } else {
+            // Create new entry
+            await dbRef.push({
+                ...newData,
+                subject: subject,
+                uploadedAt: Date.now(),
+                uploadedBy: user.email
+            });
+        }
+
+        // Hide loading indicator and show success message
+        if (loadingSpinner) loadingSpinner.classList.add('hidden');
+        alert('Materials uploaded successfully!');
+        window.location.href = `results.html?college=${college}&branch=${branch}&semester=${semester}`;
+
     } catch (error) {
         console.error('Upload error:', error);
+        if (loadingSpinner) loadingSpinner.classList.add('hidden');
         alert(`Error uploading materials: ${error.message}`);
     }
 }
 
-// Add periodic cleanup
-setInterval(async () => {
-    if (college && semester && branch) {
-        await cleanupOrphanedEntries(college, branch, semester);
+// Helper function to delete old files from storage
+async function deleteOldFiles(oldData) {
+    const fieldsToDelete = ['pdfUrl', 'chap1', 'chap2', 'chap3', 'chap4', 'chap5'];
+    
+    for (const field of fieldsToDelete) {
+        if (oldData[field] && oldData[field].includes('firebasestorage')) {
+            try {
+                const fileRef = storage.refFromURL(oldData[field]);
+                await fileRef.delete();
+            } catch (error) {
+                console.warn(`Failed to delete old file ${field}:`, error);
+                // Continue with other deletions even if one fails
+            }
+        }
     }
-}, 60000); // Run every minute
-
-// Initial cleanup and fetch when page loads
-if (college && semester && branch) {
-    cleanupOrphanedEntries(college, branch, semester)
-        .then(() => fetchData(college, semester, branch))
-        .catch(error => console.error('Initial cleanup error:', error));
 }
 
+// Helper function to upload new files
+async function uploadFiles(college, branch, semester, subject) {
+    const newData = {};
+    const fileFields = [
+        { id: 'prevYear', key: 'pdfUrl', path: 'prev-year' },
+        { id: 'chap1', key: 'chap1', path: 'chap1' },
+        { id: 'chap2', key: 'chap2', path: 'chap2' },
+        { id: 'chap3', key: 'chap3', path: 'chap3' },
+        { id: 'chap4', key: 'chap4', path: 'chap4' },
+        { id: 'chap5', key: 'chap5', path: 'chap5' }
+    ];
 
+    for (const field of fileFields) {
+        const fileInput = document.getElementById(field.id);
+        if (fileInput && fileInput.files[0]) {
+            const file = fileInput.files[0];
+            const storageRef = storage.ref(`${college}/${branch}/${semester}/${subject}/${field.path}`);
+            await storageRef.put(file);
+            newData[field.key] = await storageRef.getDownloadURL();
+        }
+    }
 
+    // Add YouTube playlist if provided
+    const youtubeInput = document.getElementById('youtubePlaylist');
+    if (youtubeInput && youtubeInput.value) {
+        newData.youtubePlaylist = youtubeInput.value;
+    }
 
-
+    return newData;
+}
 
 // Auth State Management
 const authUI = {
