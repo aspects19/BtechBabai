@@ -1,7 +1,7 @@
 # Btech Babai
 
 Btech Babai is an open-source web application designed to help engineering students easily access academic resources such as subject PDFs, previous year exam papers, and relevant YouTube playlists. The project is built on Firebase and aims to provide a centralized repository of study materials.
-![image](https://github.com/user-attachments/assets/093263ed-714a-444f-b1d4-8229d840530d)
+![image](https://github.com/user-attachments/assets/cacb6e86-adac-4ccf-96a7-cc2264057cc8)
 
 
 ## 🚀 Live Demo (Beta)
@@ -9,6 +9,53 @@ Btech Babai is an open-source web application designed to help engineering stude
 🔗 [Btech Babai (Beta)](https://btechbabaiii-141ae.web.app/)
 
 > Note: This is a beta version and is not yet production-ready.
+
+---
+---
+
+
+
+## 🤝 Contributing
+
+We welcome contributions from everyone! Follow these steps to contribute:
+
+
+
+![image](https://github.com/user-attachments/assets/5a7c44a9-a23d-471f-a95e-a92dfc3ecae3)
+
+
+
+### 🏆 **Add Your Profile to the Team Page**
+
+Even if you don’t make big changes, you can still be featured on our **Team Page**! Here’s how:
+
+1. **Star** ⭐ the repository.
+2. **Fork** the repository to your GitHub account.
+3. Navigate to `public/contributors/contributors.json`.
+4. Add your details in the following format:
+   ```json
+   {
+     "name": "shafi mohammad", 
+     "github": "shafimohammad09", 
+     "bio": "I am a passionate software developer", 
+     "city": "Kakinada", 
+     "instagram": "https://www.instagram.com/iam_shafi_mohammad", 
+     "linkedin": "https://www.linkedin.com/in/shafimohammad09/", 
+     "twitter": "https://x.com/shafi_Mohammad_"
+   }
+   ```
+5. Commit your changes and **raise a PR**.
+6. Once merged, your profile will be displayed on the **Team Page**! 🎉
+
+### 🛠 **General Contributions**
+
+1. **Find an issue** (or create one) and discuss before working.
+2. Follow best coding practices.
+3. Ensure compatibility with Firebase.
+4. Submit a **Pull Request (PR)** with a meaningful description.
+
+> 🚨 **Note:** Only Shafi (project owner) will handle Firebase database modifications, but you can suggest improvements via issues.
+
 
 ---
 
@@ -67,42 +114,6 @@ To run this project locally, follow these steps:
 
 > Note: Vite is not yet integrated, so there's no need to use a build step.
 
----
-
-## 🤝 Contributing
-
-We welcome contributions from everyone! Follow these steps to contribute:
-
-### 🏆 **Add Your Profile to the Team Page**
-
-Even if you don’t make big changes, you can still be featured on our **Team Page**! Here’s how:
-
-1. **Star** ⭐ the repository.
-2. **Fork** the repository to your GitHub account.
-3. Navigate to `public/contributors/contributors.json`.
-4. Add your details in the following format:
-   ```json
-   {
-     "name": "shafi mohammad", 
-     "github": "shafimohammad09", 
-     "bio": "I am a passionate software developer", 
-     "city": "Kakinada", 
-     "instagram": "https://www.instagram.com/iam_shafi_mohammad", 
-     "linkedin": "https://www.linkedin.com/in/shafimohammad09/", 
-     "twitter": "https://x.com/shafi_Mohammad_"
-   }
-   ```
-5. Commit your changes and **raise a PR**.
-6. Once merged, your profile will be displayed on the **Team Page**! 🎉
-
-### 🛠 **General Contributions**
-
-1. **Find an issue** (or create one) and discuss before working.
-2. Follow best coding practices.
-3. Ensure compatibility with Firebase.
-4. Submit a **Pull Request (PR)** with a meaningful description.
-
-> 🚨 **Note:** Only Shafi (project owner) will handle Firebase database modifications, but you can suggest improvements via issues.
 
 ---
 
